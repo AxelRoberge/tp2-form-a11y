@@ -1,0 +1,105 @@
+/**
+ * TABLE DES MATIERES
+ *
+ * Normalize (au lieu du reset)
+ * Utilitaires
+ * Grille 12 colonnes
+ * Styles de base
+ * Boutons radios accessibles
+ *** Form
+ *** Label des boutons radio
+ *** Interactivité
+ *** Erreurs
+ */
+
+/* Normalize (reset qui harmonise le rendu des éléments de formulaire)
+   ========================================================================== */
+@import url(normalize.css);
+
+/* Utilitaires (contient box-sising = border-box et autres utiles)
+      ========================================================================== */
+@import url(utilitaires.css);
+
+/* Grille 12 colonnes (jeu de classes : conteneur, rangee, cols_X_de_12)
+      ========================================================================== */
+@import url(grille.css);
+
+/* Styles de base
+      ========================================================================== */
+header{
+    display: flex;
+    justify-content: center;
+    
+}
+
+main form {
+        width: 80%;
+        margin: 0 auto;
+      }
+
+fieldset.form-section{
+    justify-content: left;
+    flex-wrap: wrap;
+}
+
+
+fieldset.disponibilite{
+    border:none;
+}
+      
+ul.choix-chambres {
+    display: flex;
+    list-style: none;
+    
+}
+.choix-chambres li{
+    flex-basis: 33%;
+}
+
+
+.chambres {
+    display: block;
+    /* pour placer le nom du café en dessous de son image */
+}
+
+label {
+    /* placer les étiquettes au-dessus des champs de saisie */
+    display: block;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel] {
+    /* pleine largeur pour la plupart des champs de saisie */
+    display: inline-block;
+    width: 30%;
+}
+input[type=radio]+label {
+    display: inline-block;
+    text-align: center;
+    border: 2px solid transparent;
+}
+
+/*** Interactivité ***/
+[type=radio]:hover+label {
+    cursor: pointer;
+}
+
+[type=radio]:hover+label,
+[type=radio]:focus+label {
+    border: 2px solid #09c231;
+}
+
+[type=radio]:checked+label {
+    border: 2px solid #068221;
+}
+button {
+  
+    padding: 0.5rem;
+    background-color: #d6dfcf;
+}
+
+button:hover,
+button:focus {
+    background-color: #dfce99;
+}

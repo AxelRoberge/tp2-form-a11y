@@ -67,3 +67,7 @@ abbr[title]:hover{
     position: static;
     width: auto;
 }
+input[type="radio"]:checked+label img {
+    outline: 3px solid 
+  #0f0;
+  } 
